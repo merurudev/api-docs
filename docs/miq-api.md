@@ -9,9 +9,13 @@ Quote を作成できる API を提供します。
 ## `POST /generate` - Quote を生成
 
 - `username`: `@`より後に続くユーザー名を入力します。
-- `display_name`: 表示名を入力します。
+- `display_name`: 表示名を入力します。(`null`である場合、`username`が代入されます。)
 - `text`: 文章を入力します。
 - `avatar`: `png`または`jpg`形式の URL を入力します。
+
+::: danger
+`avatar` に `.gif`, `.webp` 形式の画像を設定することはできません。
+:::
 
 ```
 POST: https://miq.meru.moe/generate
