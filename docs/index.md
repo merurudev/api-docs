@@ -30,8 +30,23 @@ features:
 ---
 
 <style>
-	:root {
-  		--vp-home-hero-name-color: transparent;
- 		--vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
-	}
+:root {
+  --vp-home-hero-name-color: transparent !important;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #2ee8ff 40%, #d1e6f3) !important;
+
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #66adff 50%, #419edf 50%) !important;
+  --vp-home-hero-image-filter: blur(44px) !important;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px) !important;
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px) !important;
+  }
+}
 </style>
