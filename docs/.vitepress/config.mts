@@ -4,6 +4,8 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
 	title: 'docs.meru.moe',
 	description: 'Simple REST APIs Documentation',
+	cleanUrls: true,
+	lastUpdated: true,
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
@@ -22,11 +24,15 @@ export default defineConfig({
 			{
 				text: 'API',
 				items: [
-					{ text: 'Make It a Quote', link: '/miq-api' },
 					{ text: 'Discord Watcher', link: '/dc-watcher' },
+					{ text: 'Make It a Quote', link: '/miq-api' },
+					{ text: 'VPNGate Checker', link: '/vpngate' },
 				],
 			},
 		],
+		search: {
+			provider: 'local',
+		},
 
 		socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
 	},

@@ -2,11 +2,13 @@
 outline: deep
 ---
 
+# 始める
+
 API の利用は非常に簡単で、HTTP(s)通信ができる環境、そしてライブラリがあれば誰でも始められます。
 Python であれば、`requests`, `httpx`, `aiohttp`のライブラリが必要です。
 JavaScript であれば、`fetch`, `axios`のライブラリが必要です。
 
-# 接続を確認する
+## 接続を確認する
 
 ```
 GET https://meru.moe/cdn-cgi/trace
@@ -33,3 +35,13 @@ gateway=off
 rbi=off
 kex=X00000
 ```
+
+## API を使ってみる
+
+正常に接続できたら、早速 API を使い始めてみましょう！
+
+以下は、現在提供中の API です。
+
+- [Make It a Quote](/miq-api)
+- [VPNGate Checker](/vpngate)
+- [Discord Watcher](/dc-watcher)
