@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	title: 'docs.meru.moe',
+	title: "meruru's API",
 	description: 'Simple REST APIs Documentation',
 	cleanUrls: true,
 	lastUpdated: true,
@@ -34,6 +34,6 @@ export default defineConfig({
 			provider: 'local',
 		},
 
-		socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+		socialLinks: [{ icon: 'github', link: 'https://github.com/merurudev/api-docs' }],
 	},
 });

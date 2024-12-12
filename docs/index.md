@@ -6,6 +6,9 @@ hero:
   name: "meruru's API"
   text: 'Documentation'
   tagline: シンプルなREST APIのドキュメント。
+  image:
+    src: /meru.webp
+    alt: meruru
   actions:
     - theme: brand
       text: 始める

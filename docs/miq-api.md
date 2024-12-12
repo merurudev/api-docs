@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Make It a Quote
+# Make It a Quote <Badge type="info" text="v1.0.0"/>
 
 Quote を作成できる API を提供します。
 
@@ -13,8 +13,14 @@ Quote を作成できる API を提供します。
 - `text`: 文章を入力します。
 - `avatar`: `png`または`jpg`形式の URL を入力します。
 
-::: danger
+::: danger 警告！！
 `avatar` に `.gif`, `.webp` 形式の画像を設定することはできません。
+:::
+
+::: warning カラーオプションについて
+生成された Quote は全てカラー(色付き)になります。
+
+モノクロ版(白黒)の Quote は今のところ生成できません。(近日中に可能になります。)
 :::
 
 ```
