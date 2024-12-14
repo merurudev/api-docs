@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# VPNGGate Checker <Badge type="info" text="v1.0.0"/>
+# VPNGate Checker <Badge type="info" text="v1.0.0"/>
 
 [筑波 VPN(VPNGate)](https://vpngate.net/)の IP であるかチェックできる API を提供します。
 
