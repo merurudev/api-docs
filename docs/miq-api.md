@@ -36,11 +36,36 @@ Content-Type: application/json
 }
 ```
 
+## Example(JavaScript)
+
+```js
+async function Quote() {
+	const res = await fetch('https://miq.meru.moe/generate', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			username: 'me_ru_ru',
+			display_name: 'めるる',
+			text: 'Hello World!',
+			avatar: 'https://cdn.discordapp.com/avatars/1073139051617603584/1bfc4eb6fdc6ccc5ac754c6b7c5adeb9.png',
+		}),
+	});
+	if (res.ok) {
+		const data = await res.json();
+		console.log(data);
+	} else {
+		throw new Error(`Failed to request. (${res.status})`);
+	}
+}
+```
+
 ### 正常なレスポンス
 
 ステータスコードは 200 を返します。
 
-```
+```json
 {
 	"success": true,
 	"msg": "Generated",
@@ -52,7 +77,7 @@ Content-Type: application/json
 
 ステータスコードは 400 を返します。
 
-```
+```json
 {
 	"success": false,
 	"msg": "Invalid body",
