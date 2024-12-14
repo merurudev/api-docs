@@ -74,9 +74,14 @@ import { writeFile } from 'fs/promises';
 import { join } from 'path';
 
 async function SaveQuote(url) {
+	/* URLはQuote()で取得したurlを入力する */
 	const res = await fetch(url);
+
+	/* Bufferにする */
 	const arrBuff = await res.arrayBuffer();
 	const buffer = Buffer.from(arrBuff);
+
+	/* 保存処理 */
 	const filename = 'filename.png';
 	const path = join(__dirname, '/quotes/', filename);
 	await writeFile(path, buffer);
