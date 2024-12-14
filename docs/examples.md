@@ -87,3 +87,31 @@ async function SaveQuote(url) {
 	await writeFile(path, buffer);
 }
 ```
+
+## VPNGate Checker
+
+### クライアントの IP をチェックし、ブロックする (Hono+Node.js)
+
+```js
+import { Hono } from 'hono';
+import { getConnInfo } from '@hono/node-server/conninfo';
+
+const app = new Hono();
+
+async function CheckIP(ip) {
+	const res = await fetch(`https://vpn.meru.moe/${ip}`);
+	const data = await res.json();
+	return data.vpn;
+}
+
+app.get('/', async (c) => {
+	const info = getConnInfo(c); // info is `ConnInfo`
+	const ip = info.remote.address;
+	const isVPN = await CheckIP(ip);
+	if (isVPN) {
+		return c.text('You are not allowed', 403);
+	} else {
+		return c.text('Hello World!');
+	}
+});
+```
